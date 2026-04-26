@@ -1,0 +1,10 @@
+{
+  "given the user is on the transfer form": "/transfer",
+  "the transfer form": "/transfer",
+  "/transfer-form": "/transfer",
+  "given the user is on the login page": "/login",
+  "the login page": "/login",
+  "the dashboard": "/dashboard",
+  "/dashboard": "/dashboard"
+}
+

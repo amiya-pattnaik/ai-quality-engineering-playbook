@@ -1,0 +1,61 @@
+{
+  "name": "banking-transfer-enhancement-wdio-rest",
+  "goal": "Generate traceable functional test cases and targeted automation using WebdriverIO for UI and REST runner for API.",
+  "mode": "both",
+  "runtime": {
+    "language": "nodejs",
+    "orchestration": "langchain",
+    "retrieval": "llamaindex"
+  },
+  "model": {
+    "provider": "openai",
+    "name": "gpt-4.1"
+  },
+  "requirementSources": [
+    {
+      "type": "jira",
+      "id": "BANK-124",
+      "title": "Add scheduled transfer support",
+      "acceptanceCriteria": [
+        "User can schedule a transfer for a future date.",
+        "Transfer date cannot be in the past.",
+        "User sees a confirmation with transfer amount, source account, target account, and scheduled date."
+      ]
+    },
+    {
+      "type": "gherkin",
+      "path": "requirements/scheduled-transfer.feature",
+      "usage": "ui"
+    },
+    {
+      "type": "gherkin",
+      "path": "requirements/scheduled-transfer-api.feature",
+      "usage": "api"
+    }
+  ],
+  "changeContext": {
+    "provider": "github",
+    "branch": "feature/scheduled-transfer",
+    "changedFiles": [
+      "src/api/transfers.js",
+      "src/services/transfer-service.js",
+      "web/js/transfer-form.js"
+    ]
+  },
+  "qualitySignals": {
+    "provider": "sonarqube",
+    "projectKey": "banking-transfer-ui"
+  },
+  "automationTargets": {
+    "api": "basic-rest",
+    "ui": "webdriverio"
+  },
+  "expectedOutputs": [
+    "functional test cases",
+    "api automation",
+    "ui automation",
+    "impacted test selection",
+    "execution summary",
+    "quality summary"
+  ]
+}

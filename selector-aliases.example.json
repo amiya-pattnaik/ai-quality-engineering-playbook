@@ -1,0 +1,10 @@
+{
+  "userNameField": "#username",
+  "passwordField": "#password",
+  "loginButton": "button[type='submit']",
+  "searchField": "[data-testid='search-input']",
+  "dateField": "[data-testid='date-input']",
+  "submitButton": "[data-testid='submit-button']",
+  "confirmationMessage": "[data-testid='confirmation-banner']",
+  "validationMessage": "[data-testid='validation-error']"
+}
