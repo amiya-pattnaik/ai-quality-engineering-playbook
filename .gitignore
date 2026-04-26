@@ -1,0 +1,29 @@
+node_modules/
+
+# Local environment and Codex markers
+.env
+.env.*
+.codex-write-check
+
+# Generated QE outputs
+reports/*
+!reports/.gitkeep
+tests/generated/api/*
+!tests/generated/api/.gitkeep
+tests/generated/ui/playwright/pageobjects/*
+!tests/generated/ui/playwright/pageobjects/.gitkeep
+tests/generated/ui/playwright/specs/*
+!tests/generated/ui/playwright/specs/.gitkeep
+tests/generated/ui/webdriverio/pageobjects/*
+!tests/generated/ui/webdriverio/pageobjects/.gitkeep
+tests/generated/ui/webdriverio/specs/*
+!tests/generated/ui/webdriverio/specs/.gitkeep
+
+# Local override files
+selector-aliases.json
+route-aliases.json
+
+# Test runner output
+playwright-report/
+test-results/
+wdio-logs/
