@@ -27,3 +27,4 @@ route-aliases.json
 playwright-report/
 test-results/
 wdio-logs/
+node_modules/
